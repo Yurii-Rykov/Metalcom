@@ -1,3 +1,4 @@
+import Slider from 'components/Slider/Slider';
 import { Link } from 'react-router-dom';
 import s from './Home.module.css';
 
@@ -5,6 +6,10 @@ const Home = () => {
     return (
         <div>
             HOME
+            <section className={s.slider}>
+            <Slider/>
+            </section>
+            
             <section className={s.catalog} id="catalog">
                 <Link className={s.link} to="/catalog1">
                     <img src="https://via.placeholder.com/500x350" alt="" />
