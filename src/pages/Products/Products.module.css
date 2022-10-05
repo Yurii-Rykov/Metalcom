@@ -1,0 +1,15 @@
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px gray;
+    cursor: pointer;
+}
+
+.card:hover {
+    scale: 1.05;
+}

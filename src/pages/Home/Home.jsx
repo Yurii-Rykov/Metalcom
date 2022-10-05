@@ -6,19 +6,19 @@ const Home = () => {
         <div>
             HOME
             <section className={s.catalog} id="catalog">
-                <Link className={s.link} to="/catalog1">
+                <Link className={s.link} to="catalog/1">
                     <img src="https://via.placeholder.com/500x350" alt="" />
                     Каталог 1
                 </Link>
-                <Link className={s.link} to="/catalog2">
+                <Link className={s.link} to="catalog/2">
                     <img src="https://via.placeholder.com/500x350" alt="" />
                     Каталог 2
                 </Link>
-                <Link className={s.link} to="/catalog3">
+                <Link className={s.link} to="catalog/3">
                     <img src="https://via.placeholder.com/500x350" alt="" />
                     Каталог 3
                 </Link>
-                <Link className={s.link} to="/catalog4">
+                <Link className={s.link} to="catalog/4">
                     <img src="https://via.placeholder.com/500x350" alt="" />
                     Каталог 4
                 </Link>
