@@ -3,5 +3,5 @@
     width: 100%;
     gap: 15px;
     padding: 15px;
-    background-image: linear-gradient(to top left, rgb(168, 198, 255) 20%, rgb(241, 241, 241));
+    background-color: var(--mainColor);
 }
