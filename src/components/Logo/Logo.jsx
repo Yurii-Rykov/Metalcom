@@ -1,10 +1,10 @@
 import { Icon } from 'components';
 import icons from '../../images/icons.svg';
 
-const Logo = () => {
+const Logo = ({ className }) => {
     return (
         <div>
-            <Icon width="50" height="50" href={`${icons}#logo`} />
+            <Icon className={className} width="50" height="50" href={`${icons}#logo`} />
         </div>
     );
 };
