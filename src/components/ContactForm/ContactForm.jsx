@@ -1,5 +1,9 @@
 import { useForm } from 'react-hook-form';
 import { Button } from 'components';
+<<<<<<< HEAD
+import axios from 'axios';
+=======
+>>>>>>> b7ebbede5e6af44f4fc4392f7b59964161e10b39
 import s from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -9,8 +13,14 @@ const ContactForm = () => {
         handleSubmit,
     } = useForm({ mode: 'onBlur' }); 
 
-    const send = data => {
-        console.log('data: ', data);
+    const send = async data => {
+        try {
+            const result = await axios.post('http://localhost:3001', data);
+            console.log('result: ', result);
+            console.log('data: ', data);
+        } catch (error) {
+            console.log('error: ', error);
+        }
     };
 
     return (
