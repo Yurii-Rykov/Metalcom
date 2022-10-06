@@ -9,7 +9,7 @@ const Header = () => {
                 <Logo />
             </NavLink>
             <NavLink to="/">Головна</NavLink>
-            <NavLink to="/#catalog">Каталог</NavLink>
+            <NavLink to="/catalog">Каталог</NavLink>
             <NavLink to="/#about">Про компанію</NavLink>
             <NavLink to="/cooperation">Співробітництво</NavLink>
             <NavLink to="#footer">Контакти</NavLink>

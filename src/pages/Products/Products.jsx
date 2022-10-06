@@ -13,7 +13,7 @@ const Products = () => {
 
     return (
         <>
-            <h2>Prodacts List № {catalogIdx}</h2>
+            <h2 id="catalog">Prodacts List № {catalogIdx}</h2>
             <ul className={s.catalog}>
                 {catalog.map(({ name, id }) => (
                     <li key={name}>
