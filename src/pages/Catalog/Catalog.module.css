@@ -1,0 +1,9 @@
+.catalog {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link:hover {
+    border: 4px solid red;
+}
