@@ -1,9 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Button } from 'components';
-<<<<<<< HEAD
 import axios from 'axios';
-=======
->>>>>>> b7ebbede5e6af44f4fc4392f7b59964161e10b39
 import s from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -11,7 +8,7 @@ const ContactForm = () => {
         register,
         formState: { errors },
         handleSubmit,
-    } = useForm({ mode: 'onBlur' }); 
+    } = useForm({ mode: 'onBlur' });
 
     const send = async data => {
         try {
