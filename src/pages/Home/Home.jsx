@@ -5,67 +5,16 @@ import s from './Home.module.css';
 const Home = () => {
     return (
         <div>
-            HOME
             <section className={s.slider}>
                 <Slider />
             </section>
-            <section>
-                <p>
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50 Lorem50
-                    Lorem50
-                </p>
+            
+            <section className={s.catalog}>
+              
             </section>
-            <ContactForm />
+            
             <section className={s.contacts}>
+            <ContactForm />
                 <iframe
                     title="myFrame"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.373426962818!2d30.460970921899165!3d50

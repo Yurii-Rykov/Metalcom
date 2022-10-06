@@ -1,7 +1,44 @@
 .header {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     gap: 15px;
-    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     background-color: var(--mainColor);
+}
+
+.wrapper_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-right: 60px; */
+}
+
+.logoHeader {
+    --logo-color: var(--whiteColor);
+    width: 100px;
+    height: 100px;
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--whiteColor);
+    font-size: 28px;
+}
+
+.nav {
+    color: var(--whiteColor);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+
+.nav:hover, .nav:focus {
+    /* color: #3982D9; */
+    color: #C1C1C0;
+    border-bottom: 2px solid #C1C1C0;
 }
