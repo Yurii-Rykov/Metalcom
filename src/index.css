@@ -4,6 +4,8 @@
 :root {
     --mainColor: #2C2D35;
     --whiteColor: #fff;
+    --greyColor: #C1C1C0;
+    --shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
 }
 
 html {

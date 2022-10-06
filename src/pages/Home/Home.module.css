@@ -6,6 +6,6 @@
 
 .contacts {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
 }

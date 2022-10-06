@@ -8,7 +8,7 @@ const ContactForm = () => {
         register,
         formState: { errors },
         handleSubmit,
-    } = useForm({ mode: 'onBlur' });
+    } = useForm({ mode: 'onBlur' }); 
 
     const send = data => {
         sendEmail(data);
@@ -18,7 +18,6 @@ const ContactForm = () => {
     return (
         <form className={s.form}>
             <label className={s.label}>
-                <span className={s.label__text}>Ім'я</span>
                 <input
                     className={s.input}
                     placeholder="Як до Вас звертатись?"
@@ -29,10 +28,9 @@ const ContactForm = () => {
                 <p className={s.error}>{errors?.name ? `* ${errors.name.message}` : <>&nbsp;</>}</p>
             </label>
             <label className={s.label}>
-                <span className={s.label__text}>Номер телефону</span>
                 <input
                     className={s.input}
-                    placeholder="066 000 00 00"
+                    placeholder="Номер телефону"
                     title="Залиште свій номер і ми вам зетелефонуємо"
                     {...register('phone', {
                         required: "Це поле є обов'язковим",
@@ -45,10 +43,9 @@ const ContactForm = () => {
                 <p className={s.error}>{errors?.phone ? `* ${errors.phone.message}` : <>&nbsp;</>}</p>
             </label>
             <label className={s.label}>
-                <span className={s.label__text}>Email</span>
                 <input
                     className={s.input}
-                    placeholder="your@email.com"
+                    placeholder="Поштова адреса"
                     {...register('email', {
                         pattern: {
                             value: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
@@ -62,7 +59,7 @@ const ContactForm = () => {
                 <textarea
                     className={s.input__text}
                     type="textarea"
-                    placeholder="Якщо бажаєте, то залиште нам своє повідомлення"
+                    placeholder="Якщо бажаєте, залиште нам своє повідомлення"
                     {...register('text')}
                 />
             </label>
