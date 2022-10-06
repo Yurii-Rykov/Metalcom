@@ -28,6 +28,7 @@
     composes: input;
     min-height: 120px;
     margin-bottom: 20px;
+    resize: none; 
 }
 
 .input:focus {

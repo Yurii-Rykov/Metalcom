@@ -18,10 +18,10 @@ const slider = () => (
     mobileTouch={true}
     className={s.slider}
   >
-    <div data-src={firstImg} className={s.img}>
+    <div data-src={secondImg} className={s.img}>
       <p>This is info for first slider</p>
     </div>
-    <div data-src={secondImg} className={s.img}>
+    <div data-src={firstImg} className={s.img}>
       <p>This is info for second slider</p>
     </div>
     <div data-src={thirdImg} className={s.img}>

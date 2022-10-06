@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
 import { Button } from 'components';
-import sendEmail from 'helpers/sendEmail';
 import s from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -11,7 +10,6 @@ const ContactForm = () => {
     } = useForm({ mode: 'onBlur' }); 
 
     const send = data => {
-        sendEmail(data);
         console.log('data: ', data);
     };
 
