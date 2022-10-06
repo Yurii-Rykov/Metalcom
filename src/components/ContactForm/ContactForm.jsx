@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Button } from 'components';
-import sendEmail from 'helpers/sendEmail';
+import axios from 'axios';
 import s from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -10,9 +10,14 @@ const ContactForm = () => {
         handleSubmit,
     } = useForm({ mode: 'onBlur' });
 
-    const send = data => {
-        sendEmail(data);
-        console.log('data: ', data);
+    const send = async data => {
+        try {
+            const result = await axios.post('http://localhost:3001', data);
+            console.log('result: ', result);
+            console.log('data: ', data);
+        } catch (error) {
+            console.log('error: ', error);
+        }
     };
 
     return (
