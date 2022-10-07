@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/metalcom/static/css/main.032c3d91.css",
-    "main.js": "/metalcom/static/js/main.07d6e803.js",
+    "main.css": "/metalcom/static/css/main.27147e87.css",
+    "main.js": "/metalcom/static/js/main.7da36355.js",
     "static/css/273.1d38453e.chunk.css": "/metalcom/static/css/273.1d38453e.chunk.css",
     "static/js/273.2cdb27df.chunk.js": "/metalcom/static/js/273.2cdb27df.chunk.js",
     "static/css/635.9073b73a.chunk.css": "/metalcom/static/css/635.9073b73a.chunk.css",
@@ -24,8 +24,8 @@
     "static/media/gmail.svg": "/metalcom/static/media/gmail.32bf971bc1de3d805e26bad88ec7d56d.svg",
     "static/media/mobile.svg": "/metalcom/static/media/mobile.15fe10bc101724b6b05b0f5be8e4afda.svg",
     "static/media/send-file.svg": "/metalcom/static/media/send-file.b62a95dd903084280aa6c10433835fd4.svg",
-    "main.032c3d91.css.map": "/metalcom/static/css/main.032c3d91.css.map",
-    "main.07d6e803.js.map": "/metalcom/static/js/main.07d6e803.js.map",
+    "main.27147e87.css.map": "/metalcom/static/css/main.27147e87.css.map",
+    "main.7da36355.js.map": "/metalcom/static/js/main.7da36355.js.map",
     "273.1d38453e.chunk.css.map": "/metalcom/static/css/273.1d38453e.chunk.css.map",
     "273.2cdb27df.chunk.js.map": "/metalcom/static/js/273.2cdb27df.chunk.js.map",
     "635.9073b73a.chunk.css.map": "/metalcom/static/css/635.9073b73a.chunk.css.map",
@@ -37,7 +37,7 @@
     "117.6aba4379.chunk.js.map": "/metalcom/static/js/117.6aba4379.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.032c3d91.css",
-    "static/js/main.07d6e803.js"
+    "static/css/main.27147e87.css",
+    "static/js/main.7da36355.js"
   ]
 }
