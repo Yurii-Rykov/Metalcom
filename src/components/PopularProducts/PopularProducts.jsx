@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Logo from '../Logo/Logo';
 import s from './PopularProducts.module.css';
-// import { Button } from 'components';
+
 
 const PopularProducts = () => {
     // const [allCatalogs, setAllCatalogs] = useState([]);

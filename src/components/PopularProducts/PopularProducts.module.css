@@ -6,10 +6,6 @@
     padding: 80px 20px;
 }
 
-/* .title {
-    text-align: center;
-} */
-
 .list {
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +21,7 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     border: 1px solid var(--mainColor);
     border-radius: 5px;
     height: 44px;
