@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Logo from '../Logo/Logo';
 import s from './PopularProducts.module.css';
-import { Button } from 'components';
+// import { Button } from 'components';
 
 const PopularProducts = () => {
     // const [allCatalogs, setAllCatalogs] = useState([]);
@@ -47,9 +48,12 @@ const PopularProducts = () => {
                 ))}
             </ul>
             <p className={s.text}>
-                Наші продукти не містять ГМО!!! <br /> Запрошуємо Вас ознайомитись з повним переліком наших продуктів
+                
             </p>
-            <Button text="Каталог" onClick={onClick} />
+            {/* <Button text="Каталог" onClick={onClick}> </Button> */}
+            <div className={s.button}>
+               <Logo className={s.logo}/> <p className={s.button_text}>Перейти до повного каталогу...</p>
+            </div>
         </section>
     );
 };

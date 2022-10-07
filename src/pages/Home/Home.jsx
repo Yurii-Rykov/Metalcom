@@ -1,5 +1,6 @@
 import { ContactForm, PopularProducts } from 'components';
 import Slider from 'components/Slider/Slider';
+import About from 'components/About/About';
 import s from './Home.module.css';
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
             </section>
 
             <PopularProducts />
+            <About />
+
             <section className={s.contacts}>
                 <ContactForm />
                 <iframe
