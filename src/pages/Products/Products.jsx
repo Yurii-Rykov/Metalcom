@@ -12,7 +12,7 @@ const Products = () => {
     useEffect(() => {
         const getCatalog = async () => {
             try {
-                const result = await axios.get(`http://localhost:3001/api/catalogs/${catalogIdx}`);
+                const result = await axios.get(`http://localhost:4000/api/catalogs/${catalogIdx}`);
                 setCatalog(result.data);
             } catch (error) {
                 console.log(error);
@@ -34,7 +34,7 @@ const Products = () => {
             <h2 id="catalog">Prodacts List № {catalogIdx}</h2>
             <ul className={s.catalog}>
                 {catalog.map(({ name, id }) => (
-                    <li key={name}>
+                    <li key={id}>
                         <img
                             className={s.card}
                             src="https://via.placeholder.com/400x300"
