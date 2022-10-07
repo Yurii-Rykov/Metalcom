@@ -34,7 +34,7 @@ const Products = () => {
             <h2 id="catalog">Prodacts List № {catalogIdx}</h2>
             <ul className={s.catalog}>
                 {catalog.map(({ name, id }) => (
-                    <li key={name}>
+                    <li key={id}>
                         <img
                             className={s.card}
                             src="https://via.placeholder.com/400x300"

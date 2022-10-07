@@ -1,4 +1,4 @@
-import { ContactForm } from 'components';
+import { ContactForm, PopularProducts } from 'components';
 import Slider from 'components/Slider/Slider';
 import s from './Home.module.css';
 
@@ -8,13 +8,10 @@ const Home = () => {
             <section className={s.slider}>
                 <Slider />
             </section>
-            
-            <section className={s.catalog}>
-              
-            </section>
-            
+
+            <PopularProducts />
             <section className={s.contacts}>
-            <ContactForm />
+                <ContactForm />
                 <iframe
                     title="myFrame"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.373426962818!2d30.460970921899165!3d50
@@ -23,7 +20,7 @@ const Home = () => {
                 !3m2!1sru!2sua!4v1665043200890!5m2!1sru!2sua"
                     width="540"
                     height="440"
-                    style={{ border: 0, borderRadius: 5,}}
+                    style={{ border: 0, borderRadius: 5 }}
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
