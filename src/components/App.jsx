@@ -1,5 +1,8 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCatalogs } from 'redux/operation';
 import { Loader, Header, Footer } from 'components';
 import { Home } from 'pages';
 
@@ -10,7 +13,16 @@ const Cooperation = lazy(() => import('pages/Cooperation/Cooperation'));
 const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'));
 
 export const App = () => {
-    return (
+    const isLoading = useSelector(state => state.isLoading);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getCatalogs());
+    }, [dispatch]);
+
+    return isLoading ? (
+        <Loader />
+    ) : (
         <div className="container">
             <Header />
             <main className="main">
