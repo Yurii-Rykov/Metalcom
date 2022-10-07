@@ -4,16 +4,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0px;
+    gap: 12px;
+    padding: 20px;
     color: #222222;
     box-shadow: var(--shadow);
     border-radius: 5px;
     background: var(--whtitColor);
 }
 
+.form__title {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.label {
+    position: relative;
+    width: 100%;
+    /* margin-bottom: 20px; */
+    /* transform: translateY(30px); */
+    color: #000000;
+}
+
+.label__text {
+    position: absolute;
+    top: -6px;
+    transform: translateY(-100%);
+    font-size: 10px;
+}
+
 .input {
-    width: 320px;
-    height: 52px;
+    width: 100%;
     padding: 17px 20px;
     font-size: 14px;
     border: none;
@@ -21,18 +41,21 @@
     background-color: white;
     box-shadow: var(--shadow);
     color: var(--mainColor);
-
 }
 
 .input__text {
     composes: input;
     min-height: 120px;
     margin-bottom: 20px;
-    resize: none; 
+    resize: none;
 }
 
 .input:focus {
     outline: none;
+}
+
+.input::placeholder {
+    color: gray;
 }
 
 .error {
