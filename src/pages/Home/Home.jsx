@@ -19,7 +19,7 @@ const Home = () => {
                 1!3m3!1m2!1s0x40d4d2793c3b7b5f%3A0x18ceff484b3f34ba!2z0YPQuy4g0JHQtdGA0LXQttCw0L3RgdC60LDRjywgNCwg0JrQuNC10LIsIDAyMDAw!5e0
                 !3m2!1sru!2sua!4v1665043200890!5m2!1sru!2sua"
                     width="540"
-                    height="440"
+                    height="460"
                     style={{ border: 0, borderRadius: 5 }}
                     allowfullscreen=""
                     loading="lazy"

@@ -44,10 +44,9 @@ const ContactForm = () => {
         <>
             <form className={s.form}>
                 <h3 className={s.form__title}>
-                    Залиште свої контакти і ми обов'язково з Вами зв'яжемся найближчим часом
+                    Залиште свої контакти і ми вам зателефонуємо.
                 </h3>
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Ім'я</span> */}
                     <input
                         className={s.input}
                         placeholder="Ваше І'мя"
@@ -60,10 +59,9 @@ const ContactForm = () => {
                 </label>
 
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Номер телефону</span> */}
                     <input
                         className={s.input}
-                        placeholder="Залиште свій номер і ми вам зетелефонуємо"
+                        placeholder="Введіть номер телефону"
                         title="Введідть номер телефону у будь якому форматі"
                         {...register('phone', {
                             required: "Це поле є обов'язковим",
@@ -77,10 +75,9 @@ const ContactForm = () => {
                 </label>
 
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Поштова скринька</span> */}
                     <input
                         className={s.input}
-                        placeholder="Залиште Ваш email"
+                        placeholder="Введіть електронну адресу"
                         title="Введідть Ваш email за бажанням"
                         {...register('email', {
                             pattern: {
@@ -93,7 +90,6 @@ const ContactForm = () => {
                 </label>
 
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Текст повідомлення</span> */}
                     <textarea
                         className={s.input__text}
                         placeholder="Якщо бажаєте, залиште нам своє повідомлення тут"
@@ -101,10 +97,8 @@ const ContactForm = () => {
                     />
                 </label>
 
-                <label className={s.label}>
-                    {/* <span className={s.label__text}>Тут можна причіпити Ваш файл</span> */}
-                    {/* <button >Відправити файл</button> */}
-                    <img src={sendFile} alt='Send file' onClick={handlePick} title='load file' />
+                <div className={s.sendFile}>
+                    <img className={s.load_icon} src={sendFile} alt='Load file' onClick={handlePick} title='Load file' />
                     <input
                         className="hidden"
                         type="file"
@@ -112,9 +106,10 @@ const ContactForm = () => {
                         // accept=".jpg, .jpeg, .png"
                         onChange={e => chooseFile(e.target.files[0])} 
                     />
-                </label>
+                    <Button text="Відправити" onClick={handleSubmit(send)} />
+                </div>
 
-                <Button text="Відправити" onClick={handleSubmit(send)} />
+                
             </form>
         </>
     );

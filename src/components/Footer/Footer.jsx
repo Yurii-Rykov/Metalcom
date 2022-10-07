@@ -27,7 +27,7 @@ const Footer = () => {
             
             <ul className={s.wrapper}>
                 <li className={s.wrapper_item}><a href='tel:+380683526670' className={s.wrapper_contacts}><img src={`${icons.phone_icon}`} alt="icon_phone" /><p className={s.wrapper_text}>+38 068 352 66 70</p></a></li>
-                <li className={s.wrapper_item}><a href='mailto:m22070202@gmail.com' className={s.wrapper_contacts}><img src={`${icons.email_icon}`} alt="icon_email" /><p className={s.wrapper_text}>m22070202@gmail.com</p></a></li>
+                <li className={s.wrapper_item}><a href='mailto:m22070202@gmail.com' className={s.wrapper_contacts}><img src={`${icons.secondEmail_icon}`} alt="icon_email" /><p className={s.wrapper_text}>m22070202@gmail.com</p></a></li>
                 <li className={s.wrapper_item}><a href='https://goo.gl/maps/6PcpeWitLvjP28Yv9' className={s.wrapper_contacts}><img src={`${icons.location_icon}`} alt="icon_email" /><p className={s.wrapper_text}>М.Київ вул. Бережанська 4</p></a></li>
             </ul>
             
