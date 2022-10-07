@@ -2,9 +2,6 @@ import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 
-// import firstImg from '../../images/slider/slider1.jpg';
-// import secondImg from '../../images/slider/slider2.jpg';
-// import thirdImg from '../../images/slider/slider6.jpg';
 import images from 'images/slider';
 import s from './Slider.module.css';
 
@@ -19,10 +16,10 @@ const slider = () => (
         mobileTouch={true}
         className={s.slider}
     >
-        <div data-src={images.img1} className={s.img}>
+        <div data-src={images.img2} className={s.img}>
             <p>This is info for first slider</p>
         </div>
-        <div data-src={images.img2} className={s.img}>
+        <div data-src={images.img1} className={s.img}>
             <p>This is info for second slider</p>
         </div>
         <div data-src={images.img6} className={s.img}>
