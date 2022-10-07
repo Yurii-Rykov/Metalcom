@@ -27,14 +27,15 @@ const ProductCard = () => {
 
         // const getProduct = async () => {
         //     try {
-        //         const result = await axios.get(`http://localhost:3001/api/catalogs/${catalogIdx}/${productId}`);
+        //         const result = await axios.get(`http://localhost:4000/api/catalogs/${catalogIdx}/${productId}`);
         //         console.log('result: ', result);
         //         setProduct(result.data);
         //     } catch (error) {
         //         console.log(error);
         //     }
         // };
-        if (!catalog) getCatalog();
+
+        if (catalog.length === 0) getCatalog();
         //  getProduct();
         setProduct(catalog.find(({ id }) => id === productId));
     }, [catalogIdx, productId, catalog]);

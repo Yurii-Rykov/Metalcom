@@ -1,0 +1,28 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* .title {
+    text-align: center;
+} */
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px gray;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 20px;
+    text-align: center;
+}
