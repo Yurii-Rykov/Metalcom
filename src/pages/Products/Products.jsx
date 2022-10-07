@@ -12,7 +12,7 @@ const Products = () => {
     useEffect(() => {
         const getCatalog = async () => {
             try {
-                const result = await axios.get(`http://localhost:3001/api/catalogs/${catalogIdx}`);
+                const result = await axios.get(`http://localhost:4000/api/catalogs/${catalogIdx}`);
                 setCatalog(result.data);
             } catch (error) {
                 console.log(error);
