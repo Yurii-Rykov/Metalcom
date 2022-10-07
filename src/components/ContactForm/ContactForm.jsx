@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from 'components';
 import axios from 'axios';
+import sendFile from '../../images/icons/send-file.svg'
 import s from './ContactForm.module.css';
 
 const ContactForm = () => {
+    const filePicker = useRef(null);
     const [selectedFile, setSelectedFile] = useState(null);
     const {
         register,
@@ -32,6 +34,11 @@ const ContactForm = () => {
     const chooseFile = file => {
         setSelectedFile(file);
     };
+
+    const handlePick = (e) => {
+       e.preventDefault()
+        filePicker.current.click()
+    }
 
     return (
         <>
@@ -96,12 +103,14 @@ const ContactForm = () => {
 
                 <label className={s.label}>
                     {/* <span className={s.label__text}>Тут можна причіпити Ваш файл</span> */}
+                    {/* <button >Відправити файл</button> */}
+                    <img src={sendFile} alt='Send file' onClick={handlePick} title='load file' />
                     <input
-                        className={s.input}
+                        className="hidden"
                         type="file"
-                        title="Якщо бажаєте додати файл..."
+                        ref={filePicker}
                         // accept=".jpg, .jpeg, .png"
-                        onChange={e => chooseFile(e.target.files[0])}
+                        onChange={e => chooseFile(e.target.files[0])} 
                     />
                 </label>
 
