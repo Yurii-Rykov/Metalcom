@@ -6,3 +6,4 @@ export { default as Icon } from './Icon/Icon';
 export { default as Logo } from './Logo/Logo';
 export { default as ContactForm } from './ContactForm/ContactForm';
 export { default as PopularProducts } from './PopularProducts/PopularProducts';
+export { default as Downloader } from './Downloader/Downloader';

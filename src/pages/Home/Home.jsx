@@ -24,9 +24,9 @@ const Home = () => {
                     width="540"
                     height="460"
                     style={{ border: 0, borderRadius: 5 }}
-                    allowfullscreen=""
+                    allowFullScreen=""
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </section>
         </div>

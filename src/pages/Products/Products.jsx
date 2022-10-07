@@ -1,32 +1,14 @@
-import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-// import data from '../../db/catalog.json';
-import axios from 'axios';
+import { useSelector } from 'react-redux';
 import s from './Products.module.css';
 
 const Products = () => {
     const { catalogIdx } = useParams();
-    const [catalog, setCatalog] = useState([]);
-    // console.log('catalog: ', catalog);
-
-    useEffect(() => {
-        const getCatalog = async () => {
-            try {
-                const result = await axios.get(`http://localhost:4000/api/catalogs/${catalogIdx}`);
-                setCatalog(result.data);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        getCatalog();
-    }, [catalogIdx]);
-
-    // const catalog = getCatalog(catalogIdx);
-
+    const catalog = useSelector(state => state.catalogs[catalogIdx - 1]);
     const navigate = useNavigate();
 
     const chooseProduct = id => {
-        navigate(`/product/${id}?catalog=${catalogIdx}`, { replace: true });
+        navigate(`/product/${id}?catalog=${catalogIdx}`);
     };
 
     return (

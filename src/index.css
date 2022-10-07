@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
 
 :root {
-    --mainColor: #2C2D35;
+    --mainColor: #2c2d35;
     --whiteColor: #fff;
-    --greyColor: #C1C1C0;
+    --greyColor: #c1c1c0;
     --shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
 }
 
@@ -55,13 +55,16 @@ ol {
 }
 
 .hidden {
-    opacity: 0;
-    height: 0;
-    width: 0;
-    line-height: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
     overflow: hidden;
+    border: 0;
     padding: 0;
-    margin: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .container {
@@ -74,4 +77,3 @@ ol {
     padding: 80px 20px;
     flex-grow: 1;
 }
-
