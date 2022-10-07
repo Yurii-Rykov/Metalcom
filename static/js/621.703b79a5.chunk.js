@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmetalcom=self.webpackChunkmetalcom||[]).push([[621],{621:function(e,n,t){t.r(n);var c=t(184);n.default=function(){return(0,c.jsx)("div",{children:"Cooperation"})}}}]);
-//# sourceMappingURL=621.703b79a5.chunk.js.map

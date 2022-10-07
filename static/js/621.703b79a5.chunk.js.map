@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/621.703b79a5.chunk.js","mappings":"4HAIA,UAJoB,WAChB,OAAO","sources":["pages/Cooperation/Cooperation.jsx"],"sourcesContent":["const Cooperation = () => {\n    return <div>Cooperation</div>;\n};\n\nexport default Cooperation;\n"],"names":[],"sourceRoot":""}
