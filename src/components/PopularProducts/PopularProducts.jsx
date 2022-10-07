@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import s from './PopularProducts.module.css';
 import { Button } from 'components';
+import s from './PopularProducts.module.css';
 
 const PopularProducts = () => {
     // const [allCatalogs, setAllCatalogs] = useState([]);

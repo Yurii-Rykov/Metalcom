@@ -1,3 +1,4 @@
+import { Downloader } from 'components';
 import { Link } from 'react-router-dom';
 import s from './Catalog.module.css';
 
@@ -23,6 +24,7 @@ const Catalog = () => {
                     Каталог 4
                 </Link>
             </ul>
+            <Downloader />
         </section>
     );
 };
