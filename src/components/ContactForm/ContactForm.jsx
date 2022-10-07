@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from 'components';
 import axios from 'axios';
+import sendFile from '../../images/icons/send-file.svg'
 import s from './ContactForm.module.css';
 
 const ContactForm = () => {
+    const filePicker = useRef(null);
     const [selectedFile, setSelectedFile] = useState(null);
     const {
         register,
@@ -33,14 +35,18 @@ const ContactForm = () => {
         setSelectedFile(file);
     };
 
+    const handlePick = (e) => {
+       e.preventDefault()
+        filePicker.current.click()
+    }
+
     return (
         <>
             <form className={s.form}>
                 <h3 className={s.form__title}>
-                    Залиште свої контакти і ми обов'язково з Вами зв'яжемся найближчим часом
+                    Залиште свої контакти і ми вам зателефонуємо.
                 </h3>
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Ім'я</span> */}
                     <input
                         className={s.input}
                         placeholder="Ваше І'мя"
@@ -53,10 +59,9 @@ const ContactForm = () => {
                 </label>
 
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Номер телефону</span> */}
                     <input
                         className={s.input}
-                        placeholder="Залиште свій номер і ми вам зетелефонуємо"
+                        placeholder="Введіть номер телефону"
                         title="Введідть номер телефону у будь якому форматі"
                         {...register('phone', {
                             required: "Це поле є обов'язковим",
@@ -70,10 +75,9 @@ const ContactForm = () => {
                 </label>
 
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Поштова скринька</span> */}
                     <input
                         className={s.input}
-                        placeholder="Залиште Ваш email"
+                        placeholder="Введіть електронну адресу"
                         title="Введідть Ваш email за бажанням"
                         {...register('email', {
                             pattern: {
@@ -86,7 +90,6 @@ const ContactForm = () => {
                 </label>
 
                 <label className={s.label}>
-                    {/* <span className={s.label__text}>Текст повідомлення</span> */}
                     <textarea
                         className={s.input__text}
                         placeholder="Якщо бажаєте, залиште нам своє повідомлення тут"
@@ -94,18 +97,19 @@ const ContactForm = () => {
                     />
                 </label>
 
-                <label className={s.label}>
-                    {/* <span className={s.label__text}>Тут можна причіпити Ваш файл</span> */}
+                <div className={s.sendFile}>
+                    <img className={s.load_icon} src={sendFile} alt='Load file' onClick={handlePick} title='Load file' />
                     <input
-                        className={s.input}
+                        className="hidden"
                         type="file"
-                        title="Якщо бажаєте додати файл..."
+                        ref={filePicker}
                         // accept=".jpg, .jpeg, .png"
-                        onChange={e => chooseFile(e.target.files[0])}
+                        onChange={e => chooseFile(e.target.files[0])} 
                     />
-                </label>
+                    <Button text="Відправити" onClick={handleSubmit(send)} />
+                </div>
 
-                <Button text="Відправити" onClick={handleSubmit(send)} />
+                
             </form>
         </>
     );

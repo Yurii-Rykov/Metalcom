@@ -38,7 +38,7 @@
 .link_facebook,
 .link_email {
     height: 42px;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .link_instagram:hover,

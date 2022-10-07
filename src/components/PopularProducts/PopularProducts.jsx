@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Button } from 'components';
+
+import Logo from '../Logo/Logo';
 import s from './PopularProducts.module.css';
 
 const PopularProducts = () => {
@@ -46,10 +47,10 @@ const PopularProducts = () => {
                     </li>
                 ))}
             </ul>
-            <p className={s.text}>
-                Наші продукти не містять ГМО!!! <br /> Запрошуємо Вас ознайомитись з повним переліком наших продуктів
-            </p>
-            <Button text="Каталог" onClick={onClick} />
+
+            <div className={s.button} onClick={onClick}>
+                <Logo className={s.logo} /> <p className={s.button_text}>Перейти до повного каталогу...</p>
+            </div>
         </section>
     );
 };

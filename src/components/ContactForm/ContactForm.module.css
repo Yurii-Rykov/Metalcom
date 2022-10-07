@@ -1,11 +1,10 @@
 .form {
     width: 100%;
-    max-width: 420px;
+    max-width: 440px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    padding: 20px;
+    padding: 20px 30px;
     color: #222222;
     box-shadow: var(--shadow);
     border-radius: 5px;
@@ -15,21 +14,12 @@
 .form__title {
     text-align: center;
     margin-bottom: 18px;
+    color: var(--mainColor)
 }
 
 .label {
     position: relative;
     width: 100%;
-    /* margin-bottom: 20px; */
-    /* transform: translateY(30px); */
-    color: #000000;
-}
-
-.label__text {
-    position: absolute;
-    top: -6px;
-    transform: translateY(-100%);
-    font-size: 10px;
 }
 
 .input {
@@ -55,11 +45,26 @@
 }
 
 .input::placeholder {
-    color: gray;
+    color: var(--greyColor)
 }
 
 .error {
     margin: 4px 0 0;
     font-size: 10px;
     color: #ff0000;
+}
+
+.sendFile {
+    display: flex;
+    align-items: center;
+}
+
+.load_icon {
+    height: 44px;
+    margin-right: 20px;
+    transition: 0.3s ease;
+}
+
+.load_icon:hover, .load_icon:focus {
+    transform: scale(1.2);
 }
