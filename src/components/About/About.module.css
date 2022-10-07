@@ -10,6 +10,7 @@
     color: var(--mainColor);
     font-size: 26px;
     letter-spacing: 1.3px;
+    margin-bottom: 20px;
 }
 
 .about_text {

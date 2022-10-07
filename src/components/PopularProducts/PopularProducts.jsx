@@ -47,11 +47,8 @@ const PopularProducts = () => {
                     </li>
                 ))}
             </ul>
-            <p className={s.text}>
-                
-            </p>
-            {/* <Button text="Каталог" onClick={onClick}> </Button> */}
-            <div className={s.button}>
+           
+            <div className={s.button} onClick={onClick}>
                <Logo className={s.logo}/> <p className={s.button_text}>Перейти до повного каталогу...</p>
             </div>
         </section>
