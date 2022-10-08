@@ -7,6 +7,7 @@ const idx = new Date().getMonth();
 
 const PopularProducts = () => {
     const catalogs = useSelector(state => state.catalogs);
+    const lang = useSelector(state => state.lang);
     const navigate = useNavigate();
     const maxIndexes = catalogs.map(catalog => catalog.length);
     const popularProducts = maxIndexes.map((max, index) => catalogs[index][Math.min(max, idx)]);
@@ -21,7 +22,7 @@ const PopularProducts = () => {
 
     return (
         <section className={s.section}>
-            <h2 className={s.title}>Популярні товари цього місяця</h2>
+            <h2 className={s.title}>{lang.popularTitle}</h2>
             <ul className={s.list}>
                 {popularProducts.map(({ name, id }, index) => (
                     <li key={id}>
@@ -36,7 +37,7 @@ const PopularProducts = () => {
             </ul>
 
             <div className={s.button} onClick={onClick}>
-                <Logo className={s.logo} /> <p className={s.button_text}>Перейти до повного каталогу...</p>
+                <Logo className={s.logo} /> <p className={s.button_text}>{lang.popularButton}</p>
             </div>
         </section>
     );

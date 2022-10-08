@@ -1,6 +1,9 @@
 import { Button } from 'components';
+import { useSelector } from 'react-redux';
 
 const Downloader = () => {
+    const lang = useSelector(state => state.lang);
+
     const onClick = async () => {
         const response = await fetch(`http://localhost:4000/api/downloads/METALKOM_catalog.pdf`);
         const blob = await response.blob();
@@ -15,7 +18,7 @@ const Downloader = () => {
 
     return (
         <div>
-            <Button text="скачати каталог" onClick={onClick} />
+            <Button text={lang.downloadButtonText} onClick={onClick} />
         </div>
     );
 };
