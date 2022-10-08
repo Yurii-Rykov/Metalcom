@@ -24,14 +24,12 @@ const PopularProducts = () => {
         <section className={s.section}>
             <h2 className={s.title}>{lang.popularTitle}</h2>
             <ul className={s.list}>
-                {popularProducts.map(({ name, id }, index) => (
-                    <li key={id}>
-                        <img
-                            className={s.card}
-                            src="https://via.placeholder.com/400x300"
-                            alt=""
-                            onClick={() => chooseProduct(id, index)}
-                        />
+                {popularProducts.map(({ subname, name, id, img }, index) => (
+                    <li key={id} className={s.card}>
+                        <img className={s.img} src={img} alt="" width="400" onClick={() => chooseProduct(id, index)} />
+                        <p className={s.cardText}>
+                            {subname}: <span className={s.cardName}>{name}</span>
+                        </p>
                     </li>
                 ))}
             </ul>

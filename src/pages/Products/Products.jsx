@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import catalogName from 'localization/catalogName.json';
 import s from './Products.module.css';
+import { Button, Downloader } from 'components';
 
 const Products = () => {
     const { catalogIdx } = useParams();
@@ -13,16 +15,23 @@ const Products = () => {
 
     return (
         <>
-            <h2 id="catalog">Prodacts List № {catalogIdx}</h2>
+            <div className={s.thumb}>
+                <Button
+                    text="Назад"
+                    onClick={() => {
+                        navigate(`/catalog`);
+                    }}
+                />
+                <h2 id="catalog">{catalogName[catalogIdx - 1]}</h2>
+                <Downloader />
+            </div>
             <ul className={s.catalog}>
-                {catalog.map(({ name, id }) => (
-                    <li key={id}>
-                        <img
-                            className={s.card}
-                            src="https://via.placeholder.com/400x300"
-                            alt=""
-                            onClick={() => chooseProduct(id)}
-                        />
+                {catalog.map(({ subname, name, img, id }) => (
+                    <li key={id} className={s.card}>
+                        <p className={s.category}>
+                            {subname}: <span className={s.cardName}>{name}</span>
+                        </p>
+                        <img className={s.img} src={img} alt="" width="350" onClick={() => chooseProduct(id)} />
                     </li>
                 ))}
             </ul>
