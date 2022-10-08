@@ -12,7 +12,7 @@
 
 .aside {
     max-height: 100vh;
-    /* width: 300px; */
+    width: 250px;
     padding: 10px;
     overflow: auto;
 }
@@ -29,14 +29,41 @@
 }
 
 .item {
+    /* width: 230px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px gray;
     cursor: pointer;
 }
 
+.active {
+    composes: item;
+    background-color: rgb(180, 252, 252);
+}
+
 .item:hover {
-    scale: 1.03;
+    box-shadow: 2px 2px 10px #515270;
 }
 
 .listImg {
     display: flex;
     align-items: center;
+}
+
+.img {
+    border-radius: 8px;
+}
+
+.category {
+    font-size: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.cardName {
+    font-size: 14px;
+    font-weight: 700;
 }

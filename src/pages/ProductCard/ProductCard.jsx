@@ -38,9 +38,12 @@ const ProductCard = () => {
             <div className={s.container}>
                 <aside className={s.aside}>
                     <ul className={s.list}>
-                        {catalog.map(({ name, id, img }) => (
-                            <li key={id} className={s.item}>
-                                <img src={img} alt="" width="200" onClick={() => chooseProduct(id)} />
+                        {catalog.map(({ subname, name, img, id }) => (
+                            <li key={id} className={id === productId ? s.active : s.item}>
+                                <p className={s.category}>
+                                    {subname}: <span className={s.cardName}>{name}</span>
+                                </p>
+                                <img className={s.img} src={img} alt="" width="200" onClick={() => chooseProduct(id)} />
                             </li>
                         ))}
                     </ul>
