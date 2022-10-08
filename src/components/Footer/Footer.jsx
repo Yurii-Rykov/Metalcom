@@ -9,6 +9,7 @@ const Footer = () => {
 
     return (
         <footer className={s.footer} id="footer">
+            <div className={`${s.footer_wrapper} sectionWidth`}>
             <NavLink to="/" className={s.wrapper_logo}>
                 <Logo className={s.logoFooter}/>
                 <h3 className={s.name}>METALKOM</h3>
@@ -73,6 +74,7 @@ const Footer = () => {
                     </a>
                 </li>
             </ul>
+            </div>
         </footer>
     );
 };

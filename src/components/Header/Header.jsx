@@ -15,12 +15,13 @@ const Header = () => {
     };
 
     return (
-        <div className={s.header}>
+        <div className={s.header} >
+            <div className={`${s.header_wrapper} sectionWidth`}>
             <NavLink to="/" className={s.wrapper_logo}>
                 <Logo className={s.logoHeader} />
                 <h1 className={s.name}>METALKOM</h1>
             </NavLink>
-            <nav>
+            <nav className={s.wrapper_nav}>
                 <NavLink to="/" className={s.nav}>
                     {lang.head}
                 </NavLink>
@@ -54,6 +55,7 @@ const Header = () => {
                 >
                     RU
                 </button>
+            </div>
             </div>
         </div>
     );

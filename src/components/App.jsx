@@ -23,7 +23,7 @@ export const App = () => {
     return isLoading ? (
         <Loader />
     ) : (
-        <div className="container">
+        <div >
             <Header />
             <main className="main">
                 <Suspense fallback={<Loader />}>

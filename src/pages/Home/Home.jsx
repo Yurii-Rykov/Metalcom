@@ -9,10 +9,10 @@ const Home = () => {
             <section className={s.slider}>
                 <Slider />
             </section>
-
+            <div className='sectionWidth'>
             <PopularProducts />
             <About />
-
+            </div>
             <section className={s.contacts}>
                 <ContactForm />
                 <iframe
