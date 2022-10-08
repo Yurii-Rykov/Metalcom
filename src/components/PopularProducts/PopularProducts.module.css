@@ -27,6 +27,13 @@
     height: 44px;
     width: 300px;
     background-color: var(--mainColor);
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+.button:hover, .button:focus {
+    background-color: var(--greyColor);
+    border: none;
 }
 
 .button_text {
@@ -36,9 +43,21 @@
     color: var(--whiteColor);
     border-left: 1px solid var(--whiteColor);
     padding: 10px ;
+    transition: 0.3s ease;
+}
+
+.button:hover .button_text {
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+    
 }
 
 .logo {
     height: 28px;
     --logo-color: var(--whiteColor);
+    transition: 0.3s ease;
+}
+
+.button:hover .logo {
+    --logo-color: var(--mainColor)
 }
