@@ -74,6 +74,10 @@ ol {
 }
 
 .main {
-    padding: 80px 20px;
-    flex-grow: 1;
+    padding: 40px 20px;
+}
+
+.sectionWidth {
+    width: 1260px;
+    margin: 0 auto;
 }

@@ -9,9 +9,10 @@ const Footer = () => {
 
     return (
         <footer className={s.footer} id="footer">
+            <div className={`${s.footer_wrapper} sectionWidth`}>
             <NavLink to="/" className={s.wrapper_logo}>
-                <Logo className={s.logoFooter} />
-                <p className={s.name}>METALKOM</p>
+                <Logo className={s.logoFooter}/>
+                <h3 className={s.name}>METALKOM</h3>
             </NavLink>
 
             <ul className={s.social}>
@@ -73,6 +74,7 @@ const Footer = () => {
                     </a>
                 </li>
             </ul>
+            </div>
         </footer>
     );
 };

@@ -2,14 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     padding: 80px 20px;
 }
 
 .list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.title {
+    color: var(--mainColor);
+    font-size: 26px;
+    letter-spacing: 1.3px;
 }
 
 .card {
@@ -17,7 +24,7 @@
     box-shadow: 2px 2px 4px gray;
     cursor: pointer;
 }
-
+/* ----------------------------------------------- */
 .button {
     display: flex;
     align-items: center;
@@ -27,6 +34,13 @@
     height: 44px;
     width: 300px;
     background-color: var(--mainColor);
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+.button:hover, .button:focus {
+    background-color: var(--greyColor);
+    border: none;
 }
 
 .button_text {
@@ -36,9 +50,21 @@
     color: var(--whiteColor);
     border-left: 1px solid var(--whiteColor);
     padding: 10px ;
+    transition: 0.3s ease;
+}
+
+.button:hover .button_text {
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+    
 }
 
 .logo {
     height: 28px;
     --logo-color: var(--whiteColor);
+    transition: 0.3s ease;
+}
+
+.button:hover .logo {
+    --logo-color: var(--mainColor)
 }
