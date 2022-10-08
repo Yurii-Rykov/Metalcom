@@ -28,3 +28,8 @@
 .item:hover {
     scale: 1.03;
 }
+
+.listImg {
+    display: flex;
+    align-items: center;
+}
