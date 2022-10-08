@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className={s.footer} id="footer">
             <NavLink to="/" className={s.wrapper_logo}>
                 <Logo className={s.logoFooter}/>
-                <p className={s.name}>METALKOM</p>
+                <h3 className={s.name}>METALKOM</h3>
             </NavLink>
 
             <ul className={s.social}>
