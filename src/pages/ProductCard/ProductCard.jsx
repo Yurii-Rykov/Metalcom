@@ -33,11 +33,30 @@ const ProductCard = () => {
                 </ul>
             </aside>
             <div className={s.cardContainer}>
-                <h2>Product {product.name}</h2>
+                
                 <div className={s.card}>
-                    <img src={product.img} alt="" width="800" ref={mainImg} />
-                    <p>{product.name} однозначно классный продукт, Вам полюбому нужен. ИНФА = 100%</p>
+                    <div className={s.card_wrapper}>
+                        <h2 className={s.card_title}>{product.subname}: "{product.name}"</h2>
+                        <img src={product.img} alt="" width="600" ref={mainImg}  className={s.card_img}/>
+                       
+                    </div>
+                    <ul className={s.features}> 
+                        {product.features.map(e => (
+                            <li key={e} className={s.features_item}>
+                                {e}
+                            </li>
+                        ))}
+                    <ul className={s.card_size}>
+                        <li className={s.card_size_item}>{product.support === 'square' ? 'Квадрат' : 'Диаметр'} {product.supportSize} mm</li>
+                        <li className={s.card_size_item}>Минимальная высота: {product.minHeight} mm</li>
+                        <li className={s.card_size_item}>Максимальная высота:{product.maxHeight} mm</li>
+                        <li className={s.card_size_item}>Крепление столешницы: {product.fastening}</li>
+                        <li className={s.card_size_item}><div className={s.card_text_base}>База:&nbsp;{product.base.map(e => (<p key={e} className={s.card_text_item}>{e}&nbsp;</p>))}</div></li>
+                    </ul>
+                    </ul>
+                   
                 </div>
+
                 <ul className={s.listImg}>
                     {product.additionalImg?.map(img => (
                         <li key={img} className={s.item}>

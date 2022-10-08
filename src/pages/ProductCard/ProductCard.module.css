@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .aside {
@@ -19,6 +19,7 @@
 .card {
     display: flex;
     font-size: 20px;
+    align-items: stretch
 }
 
 .item {
@@ -32,4 +33,37 @@
 .listImg {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
+
+/* ------------------------------------ */
+
+.card_wrapper {
+    margin-right: 20px;
+}
+
+.features_item {
+    color: var(--mainColor);
+    font-size: 18px;
+    letter-spacing: 1.3px;
+}
+
+.features_item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card_title {
+    color: var(--mainColor);
+    font-size: 26px;
+    letter-spacing: 1.3px;
+    margin-bottom: 20px; 
+}
+
+.card_size_item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card_text_base {
+    display: flex;
+}
+
