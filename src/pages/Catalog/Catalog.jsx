@@ -1,10 +1,13 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Downloader } from 'components';
 import s from './Catalog.module.css';
 
 const Catalog = () => {
+    const lang = useSelector(state => state.lang);
     return (
         <section id="catalog">
-            <h2>Наша продукция самая продуктивная среди продуктов с продуктивностью</h2>
+            <h2>{lang.catalogTitle}</h2>
             <ul className={s.catalog}>
                 <Link className={s.link} to="1">
                     <img src="https://via.placeholder.com/500x350" alt="" />
@@ -23,6 +26,7 @@ const Catalog = () => {
                     Каталог 4
                 </Link>
             </ul>
+            <Downloader />
         </section>
     );
 };

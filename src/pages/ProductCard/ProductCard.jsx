@@ -1,49 +1,17 @@
-import { useState, useEffect } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
-// import path from 'path';
-// import data from '../../db/catalog.json';
-import axios from 'axios';
+import { useSelector } from 'react-redux';
 import s from './ProductCard.module.css';
 
 const ProductCard = () => {
     const { productId } = useParams();
     const [searchParams] = useSearchParams();
-    const [catalog, setCatalog] = useState([]);
-    const [product, setProduct] = useState();
     const navigate = useNavigate();
     const catalogIdx = searchParams.get('catalog');
-    // const catalog = data[Number(catalogIdx) - 1];
-
-    useEffect(() => {
-        const getCatalog = async () => {
-            try {
-                const result = await axios.get(`http://localhost:4000/api/catalogs/${catalogIdx}`);
-                setCatalog(result.data);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-
-        // const getProduct = async () => {
-        //     try {
-        //         const result = await axios.get(`http://localhost:4000/api/catalogs/${catalogIdx}/${productId}`);
-        //         console.log('result: ', result);
-        //         setProduct(result.data);
-        //     } catch (error) {
-        //         console.log(error);
-        //     }
-        // };
-
-        if (catalog.length === 0) getCatalog();
-        //  getProduct();
-        setProduct(catalog.find(({ id }) => id === productId));
-    }, [catalogIdx, productId, catalog]);
-
-    // const currentProduct = catalog.find(({ id }) => id === productId);
+    const catalog = useSelector(state => state.catalogs[catalogIdx - 1]);
+    const product = catalog.find(({ id }) => id === productId);
 
     const chooseProduct = id => {
-        navigate(`/product/${id}?catalog=${catalogIdx}`, { replace: true });
+        navigate(`/product/${id}?catalog=${catalogIdx}`);
     };
 
     return (

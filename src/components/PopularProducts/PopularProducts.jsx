@@ -1,40 +1,28 @@
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useSelector } from 'react-redux';
 import Logo from '../Logo/Logo';
 import s from './PopularProducts.module.css';
 
+const idx = new Date().getMonth();
 
 const PopularProducts = () => {
-    // const [allCatalogs, setAllCatalogs] = useState([]);
-    const [popularProducts, setPopularProducts] = useState([]);
+    const catalogs = useSelector(state => state.catalogs);
+    const lang = useSelector(state => state.lang);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const getPopular = async () => {
-            try {
-                const result = await axios.get(`http://localhost:4000/api/catalogs/all`);
-                const idx = new Date().getMonth();
-                const maxIndexes = result.data.map(catalog => catalog.length);
-                setPopularProducts(maxIndexes.map((i, index) => result.data[index][Math.min(idx, i)]));
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        getPopular();
-    }, []);
+    const maxIndexes = catalogs.map(catalog => catalog.length);
+    const popularProducts = maxIndexes.map((max, index) => catalogs[index][Math.min(max, idx)]);
 
     const chooseProduct = (id, index) => {
-        navigate(`/product/${id}?catalog=${index + 1}`, { replace: true });
+        navigate(`/product/${id}?catalog=${index + 1}`);
     };
 
     const onClick = () => {
-        navigate(`/catalog`, { replace: true });
+        navigate(`/catalog`);
     };
 
     return (
         <section className={s.section}>
-            <h2 className={s.title}>Популярні товари цього місяця</h2>
+            <h2 className={s.title}>{lang.popularTitle}</h2>
             <ul className={s.list}>
                 {popularProducts.map(({ name, id }, index) => (
                     <li key={id}>
@@ -42,14 +30,14 @@ const PopularProducts = () => {
                             className={s.card}
                             src="https://via.placeholder.com/400x300"
                             alt=""
-                            onClick={e => chooseProduct(id, index)}
+                            onClick={() => chooseProduct(id, index)}
                         />
                     </li>
                 ))}
             </ul>
-           
+
             <div className={s.button} onClick={onClick}>
-               <Logo className={s.logo}/> <p className={s.button_text}>Перейти до повного каталогу...</p>
+                <Logo className={s.logo} /> <p className={s.button_text}>{lang.popularButton}</p>
             </div>
         </section>
     );

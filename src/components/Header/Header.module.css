@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     gap: 15px;
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 160px;
+    /* margin-right: 160px; */
 }
 
 .logoHeader {
@@ -37,8 +37,24 @@
     padding: 10px;
 }
 
-.nav:hover, .nav:focus {
+.nav:hover,
+.nav:focus {
     /* color: #3982D9; */
-    color: #C1C1C0;
-    border-bottom: 2px solid #C1C1C0;
+    color: #c1c1c0;
+    border-bottom: 2px solid #c1c1c0;
+}
+
+.localization {
+    font-size: 16px;
+    color: var(--whiteColor);
+}
+.lang {
+    color: #c1c1c0;
+    background-color: transparent;
+    border: none;
+}
+
+.active {
+    composes: lang;
+    color: inherit;
 }
