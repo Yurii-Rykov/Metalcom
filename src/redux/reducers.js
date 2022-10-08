@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getCatalogs } from './operation';
-import { ua, ru } from '../localization';
+import { ua, ru, en } from '../localization';
 
 const initialState = {
     catalogs: [],
@@ -13,7 +13,19 @@ const catalogsSlice = createSlice({
     initialState,
     reducers: {
         languageSelection: (state, action) => {
-            state.lang = action.payload === 'ua' ? ua : ru;
+            switch (action.payload) {
+                case 'ua':
+                    state.lang = ua;
+                    break;
+                case 'ru':
+                    state.lang = ru;
+                    break;
+                case 'en':
+                    state.lang = en;
+                    break;
+                default:
+                    state.lang = ua;
+            }
         },
     },
     extraReducers: {

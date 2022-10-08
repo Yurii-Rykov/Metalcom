@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import s from './ProductCard.module.css';
@@ -5,6 +6,7 @@ import s from './ProductCard.module.css';
 const ProductCard = () => {
     const { productId } = useParams();
     const [searchParams] = useSearchParams();
+    const mainImg = useRef(null);
     const navigate = useNavigate();
     const catalogIdx = searchParams.get('catalog');
     const catalog = useSelector(state => state.catalogs[catalogIdx - 1]);
@@ -14,28 +16,35 @@ const ProductCard = () => {
         navigate(`/product/${id}?catalog=${catalogIdx}`);
     };
 
+    const toMain = url => {
+        mainImg.current.src = url;
+    };
+
+    console.log('product: ', product);
     return (
         <div className={s.container}>
             <aside className={s.aside}>
                 <ul className={s.list}>
-                    {catalog.map(({ name, id }) => (
+                    {catalog.map(({ name, id, img }) => (
                         <li key={id} className={s.item}>
-                            <img
-                                className={s.card}
-                                src="https://via.placeholder.com/200x150"
-                                alt=""
-                                onClick={() => chooseProduct(id)}
-                            />
+                            <img src={img} alt="" width="200" onClick={() => chooseProduct(id)} />
                         </li>
                     ))}
                 </ul>
             </aside>
             <div className={s.cardContainer}>
-                <h2>Product {product?.name}</h2>
+                <h2>Product {product.name}</h2>
                 <div className={s.card}>
-                    <img className={s.card} src="https://via.placeholder.com/600x450" alt="" />
-                    <p>{product?.name} однозначно классный продукт, Вам полюбому нужен. ИНФА = 100%</p>
+                    <img src={product.img} alt="" width="800" ref={mainImg} />
+                    <p>{product.name} однозначно классный продукт, Вам полюбому нужен. ИНФА = 100%</p>
                 </div>
+                <ul className={s.listImg}>
+                    {product.additionalImg?.map(img => (
+                        <li key={img} className={s.item}>
+                            <img src={img} alt="" width="200" onClick={() => toMain(img)} />
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     );

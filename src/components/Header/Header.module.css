@@ -66,5 +66,5 @@
 
 .active {
     composes: lang;
-    color: inherit;
+    color: yellow;
 }

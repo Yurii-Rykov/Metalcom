@@ -9,7 +9,7 @@ const PopularProducts = () => {
     const catalogs = useSelector(state => state.catalogs);
     const lang = useSelector(state => state.lang);
     const navigate = useNavigate();
-    const maxIndexes = catalogs.map(catalog => catalog.length -1);
+    const maxIndexes = catalogs.map(catalog => catalog.length - 1);
     const popularProducts = maxIndexes.map((max, index) => catalogs[index][Math.min(max, idx)]);
 
     const chooseProduct = (id, index) => {
