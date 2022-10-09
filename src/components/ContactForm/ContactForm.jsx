@@ -1,36 +1,29 @@
 import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import { useSelector } from 'react-redux';
-import { Button } from 'components';
-import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { Button, Loader, Modal } from 'components';
+// import axios from 'axios';
 import sendFile from '../../images/icons/send-file.svg';
 import s from './ContactForm.module.css';
+import { sendEmail } from 'redux/operation';
 
 const ContactForm = () => {
+    const [isModalShow, setIsModalShow] = useState(false);
     const filePicker = useRef(null);
     const [selectedFile, setSelectedFile] = useState(null);
     const lang = useSelector(state => state.lang);
+    const isSending = useSelector(state => state.isSending);
     const {
         register,
         formState: { errors },
         handleSubmit,
     } = useForm({ mode: 'onBlur' });
 
+    const dispatch = useDispatch();
+
     const send = async data => {
-        if (selectedFile) {
-            const formData = new FormData();
-            formData.append('file', selectedFile);
-            try {
-                await axios.post('http://localhost:3001/api/email/upload', formData);
-            } catch (error) {
-                console.log('Upload error: ', error);
-            }
-        }
-        try {
-            await axios.post('http://localhost:3001/api/email', data);
-        } catch (error) {
-            console.log('Send email error: ', error);
-        }
+        dispatch(sendEmail({ selectedFile, data }));
+        setIsModalShow(true);
     };
 
     const chooseFile = file => {
@@ -40,6 +33,11 @@ const ContactForm = () => {
     const handlePick = e => {
         e.preventDefault();
         filePicker.current.click();
+    };
+
+    const toggleModal = () => {
+        setIsModalShow(state => !state);
+        setSelectedFile(null);
     };
 
     return (
@@ -94,7 +92,6 @@ const ContactForm = () => {
                 </label>
 
                 <div className={s.sendFile}>
-
                     <img
                         className={s.load_icon}
                         src={sendFile}
@@ -112,6 +109,33 @@ const ContactForm = () => {
                     <Button text={lang.formButtonText} onClick={handleSubmit(send)} />
                 </div>
             </form>
+            {isSending && (
+                <Modal
+                    className={s.modal}
+                    child={
+                        <>
+                            <p>Зачекайте будь ласка...</p>
+                            <Loader className={s.miniLoad} />
+                        </>
+                    }
+                />
+            )}
+            {isModalShow && !isSending && (
+                <Modal
+                    className={s.modal}
+                    onClose={toggleModal}
+                    child={
+                        <>
+                            <p>
+                                Дякуємо за співпрацю!
+                                <br />
+                                Ми зв'яжемось з Вами найближчим часом
+                            </p>
+                            <Button text="OK" onClick={toggleModal} />
+                        </>
+                    }
+                />
+            )}
         </>
     );
 };
