@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/metalcom/static/css/main.ce7193d1.css",
-    "main.js": "/metalcom/static/js/main.076bb246.js",
+    "main.js": "/metalcom/static/js/main.90d1685d.js",
     "static/css/273.e8e21db1.chunk.css": "/metalcom/static/css/273.e8e21db1.chunk.css",
-    "static/js/273.904394c6.chunk.js": "/metalcom/static/js/273.904394c6.chunk.js",
+    "static/js/273.079f7ca6.chunk.js": "/metalcom/static/js/273.079f7ca6.chunk.js",
     "static/css/777.2c24d9f4.chunk.css": "/metalcom/static/css/777.2c24d9f4.chunk.css",
-    "static/js/777.5d693384.chunk.js": "/metalcom/static/js/777.5d693384.chunk.js",
-    "static/css/483.a4a84ee7.chunk.css": "/metalcom/static/css/483.a4a84ee7.chunk.css",
-    "static/js/483.90862af4.chunk.js": "/metalcom/static/js/483.90862af4.chunk.js",
+    "static/js/777.af4824c6.chunk.js": "/metalcom/static/js/777.af4824c6.chunk.js",
+    "static/css/483.77c1ce42.chunk.css": "/metalcom/static/css/483.77c1ce42.chunk.css",
+    "static/js/483.cef3cd05.chunk.js": "/metalcom/static/js/483.cef3cd05.chunk.js",
     "static/js/621.f0240c28.chunk.js": "/metalcom/static/js/621.f0240c28.chunk.js",
     "static/css/117.e83f6309.chunk.css": "/metalcom/static/css/117.e83f6309.chunk.css",
-    "static/js/117.478603ea.chunk.js": "/metalcom/static/js/117.478603ea.chunk.js",
+    "static/js/117.d4cc6102.chunk.js": "/metalcom/static/js/117.d4cc6102.chunk.js",
     "static/media/hedgehog.jpg": "/metalcom/static/media/hedgehog.1866c6a464448ee272db.jpg",
     "static/media/slider1.jpg": "/metalcom/static/media/slider1.0d8ed95f731f1b0b930c.jpg",
     "static/media/office.jpg": "/metalcom/static/media/office.1c36e824b322fbda1576.jpg",
@@ -20,7 +20,7 @@
     "static/media/cabare.jpg": "/metalcom/static/media/cabare.2510ddc46b9128f78ecb.jpg",
     "static/media/support.jpg": "/metalcom/static/media/support.3fe418a7e12ae1e12042.jpg",
     "static/media/instagram.svg": "/metalcom/static/media/instagram.b66b913a2ff21c065d2884328457ac93.svg",
-    "static/media/icons.svg": "/metalcom/static/media/icons.666b926124b1534bb6ca8d5b5bcff85d.svg",
+    "static/media/icons.svg": "/metalcom/static/media/icons.9e6626101164dfebf4315f5c5f3d89e1.svg",
     "index.html": "/metalcom/index.html",
     "static/media/email.svg": "/metalcom/static/media/email.cb3cc00df6caa6a1f4883024e5603109.svg",
     "static/media/location.svg": "/metalcom/static/media/location.fbd7a0714055d284cb2a9008fa079b56.svg",
@@ -29,19 +29,19 @@
     "static/media/mobile.svg": "/metalcom/static/media/mobile.15fe10bc101724b6b05b0f5be8e4afda.svg",
     "static/media/send-file.svg": "/metalcom/static/media/send-file.b62a95dd903084280aa6c10433835fd4.svg",
     "main.ce7193d1.css.map": "/metalcom/static/css/main.ce7193d1.css.map",
-    "main.076bb246.js.map": "/metalcom/static/js/main.076bb246.js.map",
+    "main.90d1685d.js.map": "/metalcom/static/js/main.90d1685d.js.map",
     "273.e8e21db1.chunk.css.map": "/metalcom/static/css/273.e8e21db1.chunk.css.map",
-    "273.904394c6.chunk.js.map": "/metalcom/static/js/273.904394c6.chunk.js.map",
+    "273.079f7ca6.chunk.js.map": "/metalcom/static/js/273.079f7ca6.chunk.js.map",
     "777.2c24d9f4.chunk.css.map": "/metalcom/static/css/777.2c24d9f4.chunk.css.map",
-    "777.5d693384.chunk.js.map": "/metalcom/static/js/777.5d693384.chunk.js.map",
-    "483.a4a84ee7.chunk.css.map": "/metalcom/static/css/483.a4a84ee7.chunk.css.map",
-    "483.90862af4.chunk.js.map": "/metalcom/static/js/483.90862af4.chunk.js.map",
+    "777.af4824c6.chunk.js.map": "/metalcom/static/js/777.af4824c6.chunk.js.map",
+    "483.77c1ce42.chunk.css.map": "/metalcom/static/css/483.77c1ce42.chunk.css.map",
+    "483.cef3cd05.chunk.js.map": "/metalcom/static/js/483.cef3cd05.chunk.js.map",
     "621.f0240c28.chunk.js.map": "/metalcom/static/js/621.f0240c28.chunk.js.map",
     "117.e83f6309.chunk.css.map": "/metalcom/static/css/117.e83f6309.chunk.css.map",
-    "117.478603ea.chunk.js.map": "/metalcom/static/js/117.478603ea.chunk.js.map"
+    "117.d4cc6102.chunk.js.map": "/metalcom/static/js/117.d4cc6102.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce7193d1.css",
-    "static/js/main.076bb246.js"
+    "static/js/main.90d1685d.js"
   ]
 }
