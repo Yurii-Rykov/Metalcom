@@ -8,7 +8,7 @@
 
 .list {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     gap: 30px;
 }
@@ -20,6 +20,7 @@
 }
 
 .card {
+    width: 300px;
     border-radius: 12px;
     box-shadow: 2px 2px 4px gray;
     cursor: pointer;

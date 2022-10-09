@@ -25,7 +25,7 @@ const ProductCard = () => {
 
     console.log('product: ', product); ///////////////
     return (
-        <div>
+        <div className='sectionWidth'>
             <div className={s.thumb}>
                 <Button
                     text="Назад"
@@ -35,6 +35,7 @@ const ProductCard = () => {
                     }}
                 />
                 {/* <h2 id="catalog">{catalogName[catalogIdx - 1]}</h2> */}
+                <h2 className={s.card_title}>{product.subname}: "{product.name}"</h2>
                 <Downloader />
             </div>
             <div className={s.container}>
@@ -45,7 +46,7 @@ const ProductCard = () => {
                                 <p className={s.category}>
                                     {subname}: <span className={s.cardName}>{name}</span>
                                 </p>
-                                <img className={s.img} src={img} alt="" width="200" onClick={() => chooseProduct(id)} />
+                                <img className={s.img} src={img} alt="" width="150" onClick={() => chooseProduct(id)} />
                             </li>
                         ))}
                     </ul>
@@ -55,7 +56,6 @@ const ProductCard = () => {
                     <div className={s.card}>
 
                         <div className={s.card_wrapper}>
-                        <h2 className={s.card_title}>{product.subname}: "{product.name}"</h2>
                         <img src={product.img} alt="" width="600" ref={mainImg}  className={s.card_img}/>
 
                     </div>
@@ -67,17 +67,17 @@ const ProductCard = () => {
                         ))}
                     <ul className={s.card_size}>
                         <li className={s.card_size_item}>{product.support === 'square' ? 'Квадрат' : 'Диаметр'} {product.supportSize} mm</li>
-                        <li className={s.card_size_item}>Минимальная высота: {product.minHeight} mm</li>
-                        <li className={s.card_size_item}>Максимальная высота:{product.maxHeight} mm</li>
-                        <li className={s.card_size_item}>Крепление столешницы: {product.fastening}</li>
-                        <li className={s.card_size_item}><div className={s.card_text_base}>База:&nbsp;{product.base?.map(e => (<p key={e} className={s.card_text_item}>{e}&nbsp;</p>))}</div></li>
+                        <li className={s.card_size_item}>{product.minHeight === true ? `Минимальная высота:  ${product.minHeight}mm` : ''}</li>
+                        <li className={s.card_size_item}>{product.maxHeight === true ? `Максимальная высота:  ${product.maxHeight}mm` : ''}</li>
+                        <li className={s.card_size_item}>{product.fastening === true ? `Крепление столешницы: ${product.fastening}` : ''}</li>
+                        <li className={s.card_size_item}>{product.base === true ? <div className={s.card_text_base}>База:&nbsp;{product.base?.map(e => (<p key={e} className={s.card_text_item}>{e}&nbsp;</p>))}</div> : ''}</li>
                     </ul>
                     </ul>
                     </div>
                     <ul className={s.listImg}>
                         {product.additionalImg?.map(img => (
                             <li key={img} className={s.itemImg}>
-                                <img src={img} alt="" width="200" onClick={() => toMain(img)} />
+                                <img src={img} alt="" width="150" onClick={() => toMain(img)} />
                             </li>
                         ))}
                     </ul>
