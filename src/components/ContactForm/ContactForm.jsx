@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useSelector, useDispatch } from 'react-redux';
-import { Button, Modal } from 'components';
+import { Button, Loader, Modal } from 'components';
 // import axios from 'axios';
 import sendFile from '../../images/icons/send-file.svg';
 import s from './ContactForm.module.css';
@@ -24,22 +24,6 @@ const ContactForm = () => {
     const send = async data => {
         dispatch(sendEmail({ selectedFile, data }));
         setIsModalShow(true);
-        // if (selectedFile) {
-        //     const formData = new FormData();
-        //     formData.append('file', selectedFile);
-        //     try {
-        //         await axios.post('https://metalkom.herokuapp.com/api/email/upload', formData);
-        //     } catch (error) {
-        //         console.log('Upload error: ', error);
-        //     }
-        // }
-        // try {
-        //     await axios.post('https://metalkom.herokuapp.com/api/email', data);
-        // } catch (error) {
-        //     console.log('Send email error: ', error);
-        // }
-
-        setSelectedFile(null);
     };
 
     const chooseFile = file => {
@@ -53,6 +37,7 @@ const ContactForm = () => {
 
     const toggleModal = () => {
         setIsModalShow(state => !state);
+        setSelectedFile(null);
     };
 
     return (
@@ -124,7 +109,17 @@ const ContactForm = () => {
                     <Button text={lang.formButtonText} onClick={handleSubmit(send)} />
                 </div>
             </form>
-            {isSending && <Modal className={s.modal} child={<p>Зачекайте будь ласка...</p>} />}
+            {isSending && (
+                <Modal
+                    className={s.modal}
+                    child={
+                        <>
+                            <p>Зачекайте будь ласка...</p>
+                            <Loader className={s.miniLoad} />
+                        </>
+                    }
+                />
+            )}
             {isModalShow && !isSending && (
                 <Modal
                     className={s.modal}

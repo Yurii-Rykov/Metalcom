@@ -41,7 +41,7 @@ const catalogsSlice = createSlice({
 
         [getCatalogs.rejected]: (state, action) => {
             state.isLoading = false;
-            console.error(`Getting catalogs error: ${action.payload.message}`);
+            console.error(`Getting catalogs error: ${action.payload?.message}`);
         },
 
         [sendEmail.pending]: state => {
@@ -54,7 +54,7 @@ const catalogsSlice = createSlice({
 
         [sendEmail.rejected]: (state, action) => {
             state.isSending = false;
-            console.error(`Upload error: ${action.payload.message}`);
+            console.error(`Upload error: ${action.payload?.message}`);
         },
 
         [sendingEmail.pending]: state => {
@@ -67,7 +67,7 @@ const catalogsSlice = createSlice({
 
         [sendingEmail.rejected]: (state, action) => {
             state.isSending = false;
-            console.error(`Send email error: ${action.payload.message}`);
+            console.error(`Send email error: ${action.payload?.message}`);
         },
     },
 });
