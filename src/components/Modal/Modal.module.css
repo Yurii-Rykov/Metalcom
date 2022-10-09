@@ -14,16 +14,16 @@
 .modal {
     max-width: calc(100vw - 40px);
     max-height: calc(100vh - 40px);
-    /* overflow: auto; */
+    overflow: auto;
     animation: appear 0.5s linear forwards;
     transform: scale(0.3);
 }
 
-.modal img {
+/* .modal img {
     object-fit: contain;
     height: 100%;
     width: 100%;
-}
+} */
 
 @keyframes appear {
     to {

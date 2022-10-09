@@ -7,14 +7,24 @@
 
 .container {
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 
 .aside {
-    width: 246px;
+    width: 196px;
     max-height: 90vh;
     padding: 6px;
     overflow: auto;
+}
+
+.category {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--mainColor);
+    padding-bottom: 5px;
+    /* color: var(--mainColor); */
 }
 
 .list {
@@ -23,9 +33,14 @@
     gap: 10px;
 }
 
+.cardContainer {
+    width: 800px;
+}
+
 .card {
     display: flex;
     font-size: 20px;
+    height: 480px;
     align-items: stretch;
 }
 
@@ -37,16 +52,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 216px;
+    width: 166px;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 2px 2px 4px gray;
     cursor: pointer;
 }
 
 .active {
     composes: item;
-    background-color: rgb(180, 252, 252);
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+
+.img {
+    margin-top: 5px;
 }
 
 .item:hover {
@@ -54,7 +76,6 @@
 }
 
 .listImg {
-    width: 1400px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -72,14 +93,13 @@
     margin-right: 20px;
 }
 
-.category {
-    font-size: 12px;
-    padding: 12px 0;
-    text-align: center;
+.features {
+    width: 450px;
 }
+
 .features_item {
     color: var(--mainColor);
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1.3px;
 }
 
@@ -92,6 +112,10 @@
     font-size: 26px;
     letter-spacing: 1.3px;
     margin-bottom: 20px;
+}
+
+.card_size_item {
+    font-size: 16px;
 }
 
 .card_size_item:not(:last-child) {

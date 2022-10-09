@@ -5,9 +5,9 @@
 
 .catalog {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+    margin-bottom: 20px;
 }
 
 .link {
@@ -16,10 +16,11 @@
     align-items: center;
     justify-content: flex-end;
     padding: 15px;
-    border-radius: 30px;
-    box-shadow: 2px 2px 4px gray;
-    font-size: 22px;
-    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    font-weight: 500;
+    font-size: 18px;
+    
 }
 
 .link:hover {
@@ -31,5 +32,14 @@
 }
 
 .category {
-    padding: 12px;
+    height: 50px;
+    max-width: 400px;
+    border-top: 1px solid var(--greyColor);
+    padding-top: 5px;
+    text-align: center;
+}
+
+.downloader {
+  display: flex;
+  justify-content: center
 }

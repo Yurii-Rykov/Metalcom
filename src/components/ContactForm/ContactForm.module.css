@@ -8,13 +8,13 @@
     color: #222222;
     box-shadow: var(--shadow);
     border-radius: 5px;
-    background: var(--whtitColor);
+    background: var(--whiteColor);
 }
 
 .form__title {
     text-align: center;
     margin-bottom: 18px;
-    color: var(--mainColor)
+    color: var(--mainColor);
 }
 
 .label {
@@ -45,7 +45,7 @@
 }
 
 .input::placeholder {
-    color: var(--greyColor)
+    color: var(--greyColor);
 }
 
 .error {
@@ -65,6 +65,7 @@
     transition: 0.3s ease;
 }
 
-.load_icon:hover, .load_icon:focus {
+.load_icon:hover,
+.load_icon:focus {
     transform: scale(1.2);
 }
