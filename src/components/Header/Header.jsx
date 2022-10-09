@@ -16,7 +16,7 @@ const Header = () => {
     // };
 
     return (
-        <div className={s.header}>
+        <header className={s.header} id="header">
             <div className={`${s.header_wrapper} sectionWidth`}>
                 <NavLink to="/" className={s.wrapper_logo}>
                     <Logo className={s.logoHeader} />
@@ -30,15 +30,15 @@ const Header = () => {
                     <NavLink to="/catalog" className={s.nav}>
                         {lang.catalog}
                     </NavLink>
-                    <NavHashLink to="/#about" className={s.nav}>
+                    <NavHashLink className={s.nav} to="/#about">
                         {lang.about}
                     </NavHashLink>
                     <NavLink to="/cooperation" className={s.nav}>
                         {lang.cooperation}
                     </NavLink>
-                    <NavHashLink to="#footer" className={s.nav}>
+                    <a className={s.nav} href="#footer">
                         {lang.contacts}
-                    </NavHashLink>
+                    </a>
                 </nav>
 
                 {/* <div className={s.localization}>
@@ -67,7 +67,7 @@ const Header = () => {
                 </button>
             </div> */}
             </div>
-        </div>
+        </header>
     );
 };
 
