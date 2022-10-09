@@ -14,3 +14,10 @@
     --loader-bar-color: #851515;
     --loader-bar-height: 6px;
     } */
+
+.img {
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    
+}
