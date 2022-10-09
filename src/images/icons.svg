@@ -9,9 +9,11 @@
         <circle fill="var(--accent-color, #dfac14)" fill-opacity="0" cx="4" cy="18" r="3"/>
     </symbol>
     <symbol id="logo" viewBox="0 0 50 50">
-    <path fill="var(--logo-color, #000000)" d="M0 0 V50 H6 V9 L13 16 L17 12 L6 0z"/> 
-    <path fill="var(--logo-color, #000000)" d="M50 50 H44 V9 L25 28 L21 24 L44 0 H50z"/> 
-    <path fill="var(--logo-color, #000000)" d="M8 25 L33 0 H41 L16 25 L41 50 H33z"/> 
-
+        <path fill="var(--logo-color, #000000)" d="M0 0 V50 H6 V9 L13 16 L17 12 L6 0z"/> 
+        <path fill="var(--logo-color, #000000)" d="M50 50 H44 V9 L25 28 L21 24 L44 0 H50z"/> 
+        <path fill="var(--logo-color, #000000)" d="M8 25 L33 0 H41 L16 25 L41 50 H33z"/> 
+    </symbol>
+    <symbol id="arrowLeft" viewBox="0 0 32 32">
+        <path fill="#ffffff" d="M1 16l15 15v-9h16v-12h-16v-9z"></path>
     </symbol>
 </svg>

@@ -11,9 +11,9 @@
 }
 
 .aside {
-    max-height: 100vh;
-    width: 250px;
-    padding: 10px;
+    width: 246px;
+    max-height: 90vh;
+    padding: 6px;
     overflow: auto;
 }
 
@@ -26,15 +26,15 @@
 .card {
     display: flex;
     font-size: 20px;
-    align-items: stretch
+    align-items: stretch;
 }
 
 .item {
-    /* width: 230px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    width: 216px;
+    padding: 8px;
     border-radius: 8px;
     box-shadow: 2px 2px 4px gray;
     cursor: pointer;
@@ -50,8 +50,15 @@
 }
 
 .listImg {
+    width: 1400px;
     display: flex;
     align-items: center;
+    gap: 5px;
+    overflow: auto;
+}
+
+.itemImg {
+    min-width: 200px;
     margin-top: 10px;
 }
 
@@ -79,7 +86,7 @@
     color: var(--mainColor);
     font-size: 26px;
     letter-spacing: 1.3px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .card_size_item:not(:last-child) {
@@ -89,4 +96,3 @@
 .card_text_base {
     display: flex;
 }
-

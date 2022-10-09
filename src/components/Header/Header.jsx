@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import { Logo } from 'components';
 import s from './Header.module.css';
 // import { languageSelection } from 'redux/reducers';
@@ -29,15 +30,15 @@ const Header = () => {
                     <NavLink to="/catalog" className={s.nav}>
                         {lang.catalog}
                     </NavLink>
-                    <NavLink to="/#about" className={s.nav}>
+                    <NavHashLink to="/#about" className={s.nav}>
                         {lang.about}
-                    </NavLink>
+                    </NavHashLink>
                     <NavLink to="/cooperation" className={s.nav}>
                         {lang.cooperation}
                     </NavLink>
-                    <NavLink to="#footer" className={s.nav}>
+                    <NavHashLink to="#footer" className={s.nav}>
                         {lang.contacts}
-                    </NavLink>
+                    </NavHashLink>
                 </nav>
 
                 {/* <div className={s.localization}>

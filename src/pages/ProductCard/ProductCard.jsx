@@ -2,7 +2,8 @@ import { useRef } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Button, Downloader } from 'components';
-// import catalogName from 'localization/catalogName.json';
+import catalogName from 'localization/catalogName.json';
+import icons from 'images/icons.svg';
 import s from './ProductCard.module.css';
 
 const ProductCard = () => {
@@ -28,6 +29,7 @@ const ProductCard = () => {
             <div className={s.thumb}>
                 <Button
                     text="Назад"
+                    icon={`${icons}#arrowLeft`}
                     onClick={() => {
                         navigate(`/catalog/${catalogIdx}`);
                     }}
@@ -74,7 +76,7 @@ const ProductCard = () => {
                     </div>
                     <ul className={s.listImg}>
                         {product.additionalImg?.map(img => (
-                            <li key={img} className={s.item}>
+                            <li key={img} className={s.itemImg}>
                                 <img src={img} alt="" width="200" onClick={() => toMain(img)} />
                             </li>
                         ))}

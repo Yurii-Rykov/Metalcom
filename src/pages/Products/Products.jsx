@@ -1,8 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import catalogName from 'localization/catalogName.json';
-import s from './Products.module.css';
 import { Button, Downloader } from 'components';
+import catalogName from 'localization/catalogName.json';
+import icons from 'images/icons.svg';
+import s from './Products.module.css';
 
 const Products = () => {
     const { catalogIdx } = useParams();
@@ -18,6 +19,7 @@ const Products = () => {
             <div className={s.thumb}>
                 <Button
                     text="Назад"
+                    icon={`${icons}#arrowLeft`}
                     onClick={() => {
                         navigate(`/catalog`);
                     }}
