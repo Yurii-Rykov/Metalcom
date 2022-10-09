@@ -70,7 +70,7 @@ const ProductCard = () => {
                         <li className={s.card_size_item}>Минимальная высота: {product.minHeight} mm</li>
                         <li className={s.card_size_item}>Максимальная высота:{product.maxHeight} mm</li>
                         <li className={s.card_size_item}>Крепление столешницы: {product.fastening}</li>
-                        <li className={s.card_size_item}><div className={s.card_text_base}>База:&nbsp;{product.base.map(e => (<p key={e} className={s.card_text_item}>{e}&nbsp;</p>))}</div></li>
+                        <li className={s.card_size_item}><div className={s.card_text_base}>База:&nbsp;{product.base?.map(e => (<p key={e} className={s.card_text_item}>{e}&nbsp;</p>))}</div></li>
                     </ul>
                     </ul>
                     </div>
