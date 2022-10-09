@@ -9,20 +9,26 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const slider = () => (
     <AutoplaySlider
-        play={true}
+        play={false}
         cancelOnInteraction={false} // should stop playing on user interaction
         interval={3000}
         bullets={false}
         mobileTouch={true}
         className={s.slider}
     >
-        <div data-src={images.img2} className={s.img}>
+        <div data-src={images.Scenka1} className={s.img}>
             <p>This is info for first slider</p>
         </div>
-        <div data-src={images.img1} className={s.img}>
+        <div data-src={images.Scenka2} className={s.img}>
             <p>This is info for second slider</p>
         </div>
-        <div data-src={images.img6} className={s.img}>
+        <div data-src={images.Scenka3} className={s.img}>
+            <p>This is info for third slider</p>
+        </div>
+        <div data-src={images.Scenka4} className={s.img}>
+            <p>This is info for third slider</p>
+        </div>
+        <div data-src={images.Scenka7} className={s.img}>
             <p>This is info for third slider</p>
         </div>
     </AutoplaySlider>
