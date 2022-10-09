@@ -61,6 +61,10 @@
     margin-right: 20px;
 }
 
+.features {
+    width: 450px;
+}
+
 .features_item {
     color: var(--mainColor);
     font-size: 18px;
