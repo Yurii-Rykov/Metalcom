@@ -7,7 +7,7 @@
 
 .container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .aside {
@@ -26,6 +26,7 @@
 .card {
     display: flex;
     font-size: 20px;
+    align-items: stretch;
 }
 
 .item {
@@ -58,10 +59,13 @@
 
 .itemImg {
     min-width: 200px;
+    margin-top: 10px;
 }
 
-.img {
-    border-radius: 8px;
+/* ------------------------------------ */
+
+.card_wrapper {
+    margin-right: 20px;
 }
 
 .category {
@@ -69,8 +73,27 @@
     padding: 12px 0;
     text-align: center;
 }
+.features_item {
+    color: var(--mainColor);
+    font-size: 18px;
+    letter-spacing: 1.3px;
+}
 
-.cardName {
-    font-size: 14px;
-    font-weight: 700;
+.features_item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card_title {
+    color: var(--mainColor);
+    font-size: 26px;
+    letter-spacing: 1.3px;
+    margin-bottom: 20px;
+}
+
+.card_size_item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card_text_base {
+    display: flex;
 }
