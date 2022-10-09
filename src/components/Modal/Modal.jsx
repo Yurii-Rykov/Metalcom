@@ -6,7 +6,7 @@ import s from './Modal.module.css';
 
 const modalRoot = document.querySelector('#modal-root');
 
-const Modal = ({ onClose, child }) => {
+const Modal = ({ onClose, child, className = s.modal }) => {
     useEffect(() => {
         window.addEventListener('keydown', closeModal);
         return () => window.removeEventListener('keydown', closeModal);
@@ -27,7 +27,7 @@ const Modal = ({ onClose, child }) => {
     return createPortal(
         <div className={s.overlay} onClick={onClick}>
             <Icon className={s.icon} href={`${icons}#close`} width="25" height="25" onClick={onClose} />
-            <div className={s.modal}>{child}</div>
+            <div className={className}>{child}</div>
         </div>,
         modalRoot
     );
