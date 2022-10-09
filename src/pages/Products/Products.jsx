@@ -17,13 +17,7 @@ const Products = () => {
     return (
         <>
             <div className={s.thumb}>
-                <Button
-                    text="Назад"
-                    icon={`${icons}#arrowLeft`}
-                    onClick={() => {
-                        navigate(`/catalog`);
-                    }}
-                />
+                <Button text="Назад" icon={`${icons}#arrowLeft`} onClick={() => navigate(-1)} />
                 <h2 id="catalog">{catalogName[catalogIdx - 1]}</h2>
                 <Downloader />
             </div>

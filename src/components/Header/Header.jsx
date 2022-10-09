@@ -1,7 +1,6 @@
 // import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
 import { Logo } from 'components';
 import s from './Header.module.css';
 // import { languageSelection } from 'redux/reducers';
@@ -16,7 +15,7 @@ const Header = () => {
     // };
 
     return (
-        <div className={s.header}>
+        <header className={s.header} id="header">
             <div className={`${s.header_wrapper} sectionWidth`}>
                 <NavLink to="/" className={s.wrapper_logo}>
                     <Logo className={s.logoHeader} />
@@ -30,15 +29,18 @@ const Header = () => {
                     <NavLink to="/catalog" className={s.nav}>
                         {lang.catalog}
                     </NavLink>
-                    <NavHashLink to="/#about" className={s.nav}>
+                    <a className={s.nav} href="/#about">
                         {lang.about}
-                    </NavHashLink>
+                    </a>
                     <NavLink to="/cooperation" className={s.nav}>
                         {lang.cooperation}
                     </NavLink>
-                    <NavHashLink to="#footer" className={s.nav}>
+                    {/* <NavHashLink to="/#footer" className={s.nav}>
                         {lang.contacts}
-                    </NavHashLink>
+                    </NavHashLink> */}
+                    <a className={s.nav} href="#footer">
+                        {lang.contacts}
+                    </a>
                 </nav>
 
                 {/* <div className={s.localization}>
@@ -67,7 +69,7 @@ const Header = () => {
                 </button>
             </div> */}
             </div>
-        </div>
+        </header>
     );
 };
 

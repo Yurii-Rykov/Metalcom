@@ -18,7 +18,7 @@ const PageNotFound = () => {
                 <h2 className={s.title}>404 Page Not Found</h2>
                 <img className={s.img} src={image} alt="Page Not Found" />
                 <p className={s.text}>Oops! The page you're looking for doesn't exist.</p>
-                <Button text={'Go home'} onClick={handleBtnClick} />
+                <Button text="На головну" onClick={handleBtnClick} />
             </div>
         </div>
     );

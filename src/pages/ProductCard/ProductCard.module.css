@@ -29,6 +29,10 @@
     align-items: stretch;
 }
 
+.card img {
+    cursor: pointer;
+}
+
 .item {
     display: flex;
     flex-direction: column;

@@ -1,4 +1,4 @@
-import { ContactForm, PopularProducts } from 'components';
+import { ArrowUp, ContactForm, PopularProducts } from 'components';
 import Slider from 'components/Slider/Slider';
 import About from 'components/About/About';
 import s from './Home.module.css';
@@ -9,9 +9,9 @@ const Home = () => {
             <section className={s.slider}>
                 <Slider />
             </section>
-            <div className='sectionWidth'>
-            <PopularProducts />
-            <About />
+            <div className="sectionWidth">
+                <PopularProducts />
+                <About />
             </div>
             <section className={s.contacts}>
                 <ContactForm />
@@ -29,6 +29,7 @@ const Home = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </section>
+            <ArrowUp />
         </div>
     );
 };
