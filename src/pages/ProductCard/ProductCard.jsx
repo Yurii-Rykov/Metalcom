@@ -126,7 +126,7 @@ const ProductCard = () => {
                                         )}
                                     </li>
                                 </ul>
-                                <Button text="Зв'язатись з нами" onClick={showContact} />
+                               <div className={s.btn_connect}><Button text="Зв'язатись з нами" onClick={showContact} /></div> 
                             </ul>
                         </div>
                         <ul className={s.listImg}>

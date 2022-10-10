@@ -125,3 +125,9 @@
 .card_text_base {
     display: flex;
 }
+
+.btn_connect {
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+    display: inline-block;
+}

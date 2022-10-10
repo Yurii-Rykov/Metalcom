@@ -93,7 +93,7 @@ const ContactForm = () => {
                 </label>
 
                 <div className={s.sendFile}>
-                        <div>{selectedFile?.name || 'Завантажити файл'}</div>
+                        
                     <img
                         className={s.load_icon}
                         src={sendFile}
@@ -101,6 +101,7 @@ const ContactForm = () => {
                         onClick={handlePick}
                         title="Load file"
                     />
+                    {selectedFile?.name &&<div className={s.file_name}> {selectedFile?.name}</div>}
                     <input
                         className="hidden"
                         type="file"
