@@ -95,24 +95,24 @@ const ProductCard = () => {
                                     </li>
                                 ))}
                                 <ul className={s.card_size}>
-                                    <li className={s.card_size_item}>
+                                    {product.support && <li className={s.card_size_item}>
                                         {product.support === 'square' ? 'Квадрат' : 'Диаметр'} {product.supportSize} mm
-                                    </li>
+                                    </li>}
                                     <li className={s.card_size_item}>
-                                        {product.minHeight === true
+                                        {!!product.minHeight 
                                             ? `Минимальная высота:  ${product.minHeight}mm`
                                             : ''}
                                     </li>
                                     <li className={s.card_size_item}>
-                                        {product.maxHeight === true
+                                        {!!product.maxHeight 
                                             ? `Максимальная высота:  ${product.maxHeight}mm`
                                             : ''}
                                     </li>
                                     <li className={s.card_size_item}>
-                                        {product.fastening === true ? `Крепление столешницы: ${product.fastening}` : ''}
+                                        {!!product.fastening ? `Крепление столешницы: ${product.fastening}` : ''}
                                     </li>
                                     <li className={s.card_size_item}>
-                                        {product.base === true ? (
+                                        {!!product.base  ? (
                                             <div className={s.card_text_base}>
                                                 База:&nbsp;
                                                 {product.base?.map(e => (

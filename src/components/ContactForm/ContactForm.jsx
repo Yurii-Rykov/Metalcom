@@ -35,6 +35,7 @@ const ContactForm = () => {
 
     const chooseFile = file => {
         setSelectedFile(file);
+
     };
 
     const handlePick = e => {
@@ -94,7 +95,7 @@ const ContactForm = () => {
                 </label>
 
                 <div className={s.sendFile}>
-
+                        <div>{selectedFile?.name || 'Завантажити файл'}</div>
                     <img
                         className={s.load_icon}
                         src={sendFile}
