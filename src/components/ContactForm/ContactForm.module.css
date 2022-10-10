@@ -69,3 +69,31 @@
 .load_icon:focus {
     transform: scale(1.2);
 }
+
+.modal {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.miniLoad {
+    width: 30px;
+    height: 30px;
+
+    transform-origin: center center;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}

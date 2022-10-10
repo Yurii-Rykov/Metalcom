@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCatalogs } from './operation';
+import { getCatalogs, sendEmail, sendingEmail } from './operation';
 import { ua, ru, en } from '../localization';
 
 const initialState = {
     catalogs: [],
     lang: ua,
     isLoading: false,
+    isSending: false,
 };
 
 const catalogsSlice = createSlice({
@@ -40,7 +41,33 @@ const catalogsSlice = createSlice({
 
         [getCatalogs.rejected]: (state, action) => {
             state.isLoading = false;
-            console.error(`Getting catalogs error: ${action.payload.message}`);
+            console.error(`Getting catalogs error: ${action.payload?.message}`);
+        },
+
+        [sendEmail.pending]: state => {
+            state.isSending = true;
+        },
+
+        [sendEmail.fulfilled]: state => {
+            state.isSending = true;
+        },
+
+        [sendEmail.rejected]: (state, action) => {
+            state.isSending = false;
+            console.error(`Upload error: ${action.payload?.message}`);
+        },
+
+        [sendingEmail.pending]: state => {
+            state.isSending = true;
+        },
+
+        [sendingEmail.fulfilled]: state => {
+            state.isSending = false;
+        },
+
+        [sendingEmail.rejected]: (state, action) => {
+            state.isSending = false;
+            console.error(`Send email error: ${action.payload?.message}`);
         },
     },
 });
